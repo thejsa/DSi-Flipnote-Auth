@@ -13,8 +13,8 @@ $token = md5(microtime());
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') { // Is the user connecting after a GET to give data?
 // YES
-$header = apache_request_headers(); // Apache request headers
-//$header = getallheaders(); // IIS 7 (?) request headers
+//$header = apache_request_headers(); // Apache request headers
+$header = getallheaders(); // IIS 7 (?) request headers
 
 $userdata = array( // Get user-specific data
 "FSID" => $header['X-DSi-ID'],
@@ -47,7 +47,7 @@ header('X-Hatena-Locale-Vary: l,c,r,d');
 header('X-Ridge-Dispatch: Hatena::UgoMemo::Engine::DS::Auth#default'); 
 
 } else {
-//User is connecting - send sub-generic data. 
+// NO 
 
 header('X-DSi-Auth-Challenge: \0\0\0\0\0\0\0\0'); //Set challenge for user (not verified by this script)
 header('X-DSi-New-Notices: 0');
