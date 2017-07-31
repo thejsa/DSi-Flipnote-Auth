@@ -1,5 +1,5 @@
 # DSi-Flipnote-Auth
-My script for authentication with Flipnote Studio for the DSi.
+PokeAcer's script for authentication with Flipnote Studio for the DSi.
 
 If you wish to help with the to-do, please submit a PR with added name to the Credits section aswell as the code.
 
